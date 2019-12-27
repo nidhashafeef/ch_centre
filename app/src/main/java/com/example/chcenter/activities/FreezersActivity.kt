@@ -1,4 +1,4 @@
-package com.example.chcenter
+package com.example.chcenter.activities
 
 
 import android.os.Bundle

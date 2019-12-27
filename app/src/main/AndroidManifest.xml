@@ -9,12 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Ambulance"></activity>
+
+        <activity android:name=".activities.FreezersActivity"/>
+        <activity android:name=".Ambulance"/>
         <activity android:name=".DoctorDetails" />
-        <activity android:name=".FreezerDetails" />
+        <activity android:name=".activities.FreezerDetails" />
         <activity android:name=".AmbulanceDetails" />
         <activity android:name=".MorningDoctors" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

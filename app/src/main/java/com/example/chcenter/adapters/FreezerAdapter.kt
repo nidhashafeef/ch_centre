@@ -1,7 +1,6 @@
 package com.example.chcenter.adapters
 
 
-
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -9,11 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.example.chcenter.FreezerDetails
-import com.example.chcenter.MainActivity
+import com.example.chcenter.activities.MainActivity
 import com.example.chcenter.models.FreezerModel
 import com.example.chcenter.R
 import kotlinx.android.synthetic.main.list_view_freezer.view.*
+
 
 
 class FreezerAdapter(val context: Context, private val freezers: List<FreezerModel>) : RecyclerView.Adapter<FreezerAdapter.MyViewHolder>(){
@@ -54,7 +53,11 @@ class FreezerAdapter(val context: Context, private val freezers: List<FreezerMod
                     Toast.makeText(context, currenctFreezer!!.Name+"Clicked !",Toast.LENGTH_SHORT).show()
                 }
 
+
+
             }
+
+
 
             itemView.imgShare.setOnClickListener {
 
@@ -75,7 +78,9 @@ class FreezerAdapter(val context: Context, private val freezers: List<FreezerMod
 
         fun setData(freezer: FreezerModel?, pos:Int){
             freezer?.let{
-                itemView.txvName.text = freezer.Name
+
+                itemView.txvContact.text=freezer?.Phoneno
+                itemView.txvName.text = freezer?.Name
             }
 
             this.currenctFreezer = freezer
