@@ -6,15 +6,16 @@ import android.os.PersistableBundle
 import com.google.android.material.tabs.TabLayout
 import androidx.viewpager.widget.ViewPager
 import androidx.appcompat.app.AppCompatActivity
-import android.view.Menu
-import android.view.MenuItem
+import androidx.viewpager.widget.ViewPager
 import com.example.chcenter.ui.main.SectionsPagerAdapter
+import com.google.android.material.tabs.TabLayout
 
 class Main2Activity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
+
         val sectionsPagerAdapter = SectionsPagerAdapter(this, supportFragmentManager)
         val viewPager: ViewPager = findViewById(R.id.fragment_container)
         viewPager.adapter = sectionsPagerAdapter
