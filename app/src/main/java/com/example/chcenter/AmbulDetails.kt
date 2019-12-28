@@ -3,7 +3,7 @@ package com.example.chcenter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class AmbulanceDetails : AppCompatActivity() {
+class AmbulDetails : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

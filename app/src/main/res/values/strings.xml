@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">CH Center</string>
+    <string name="card_name">Name</string>
+    <string name="card_contact">Contact</string>
     <string name="card_title">TITTLE</string>
     <string name="card_content">This data </string>
 </resources>

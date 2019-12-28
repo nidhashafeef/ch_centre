@@ -1,7 +1,8 @@
-package com.example.chcenter
+package com.example.chcenter.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.chcenter.R
 
 class FreezerDetails : AppCompatActivity() {
 

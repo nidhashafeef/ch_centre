@@ -8,14 +8,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.chcenter.Ambulance
 import com.example.chcenter.activities.MainActivity
-import com.example.chcenter.models.FreezerModel
+import com.example.chcenter.models.AmbulanceModel
 import com.example.chcenter.R
-import kotlinx.android.synthetic.main.list_view_freezer.view.*
+import kotlinx.android.synthetic.main.list_view_ambulance.view.*
 
 
 
-class FreezerAdapter(val context: Context, private val freezers: List<FreezerModel>) : RecyclerView.Adapter<FreezerAdapter.MyViewHolder>(){
+class AmbulanceAdapter(val context: Context, private val ambulances: List<AmbulanceModel>) : RecyclerView.Adapter<AmbulanceAdapter.MyViewHolder>(){
 
     companion object{
         val TAG: String = MainActivity::class.java.simpleName
@@ -24,7 +25,7 @@ class FreezerAdapter(val context: Context, private val freezers: List<FreezerMod
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
-        val view = LayoutInflater.from(context).inflate(R.layout.list_view_freezer, parent, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.list_view_ambulance, parent, false)
         return MyViewHolder(view)
 
     }
@@ -32,25 +33,26 @@ class FreezerAdapter(val context: Context, private val freezers: List<FreezerMod
     override fun getItemCount(): Int {
 
 
-        return freezers.size
+
+        return ambulances.size
 
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
 
-        val freezer = freezers[position]
-        holder.setData(freezer, position)
+        val ambulance = ambulances[position]
+        holder.setData(ambulance, position)
 
 
     }
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 
-        var currenctFreezer: FreezerModel? = null
+        var currenctAmbulance: AmbulanceModel? = null
         var currentPosition: Int = 0
         init {
             itemView.setOnClickListener{
-                currenctFreezer?.let{
-                    Toast.makeText(context, currenctFreezer!!.Name+"Clicked !",Toast.LENGTH_SHORT).show()
+                currenctAmbulance?.let{
+                    Toast.makeText(context, currenctAmbulance!!.Name+"Clicked !",Toast.LENGTH_SHORT).show()
                 }
 
 
@@ -61,8 +63,8 @@ class FreezerAdapter(val context: Context, private val freezers: List<FreezerMod
 
             itemView.imgShare.setOnClickListener {
 
-                currenctFreezer?.let {
-                    val message: String = "My hobby is:" + currenctFreezer!!.Name
+                currenctAmbulance?.let {
+                    val message: String = "My hobby is:" + currenctAmbulance!!.Name
 
                     val intent = Intent()
                     intent.action = Intent.ACTION_SEND
@@ -76,14 +78,14 @@ class FreezerAdapter(val context: Context, private val freezers: List<FreezerMod
             }
         }
 
-        fun setData(freezer: FreezerModel?, pos:Int){
-            freezer?.let{
+        fun setData(ambulance: AmbulanceModel?, pos:Int){
+            ambulance?.let{
 
-                itemView.txvContact.text=freezer?.Phoneno
-                itemView.txvName.text = freezer?.Name
+                itemView.txvContact.text=ambulance?.Phoneno
+                itemView.txvName.text = ambulance?.Name
             }
 
-            this.currenctFreezer = freezer
+            this.currenctAmbulance = ambulance
 
 
         }
