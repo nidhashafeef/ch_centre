@@ -9,13 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".LogoActivity"></activity>
+        <activity android:name=".InstructionActivity" />
+        <activity android:name=".RegistrstionActivity" />
+        <activity android:name=".OTPActivity" />
+        <activity android:name=".SignUpActivity" />
         <activity android:name=".Profile_Activity"></activity>
         <activity android:name=".Office_Activity" />
         <activity android:name=".History_Activity" />
-        <activity android:name=".Main3Activity" />
-        <activity android:name=".list" />
         <activity android:name=".AddBlood" />
-        <activity android:name=".SignUP" />
         <activity
             android:name=".Main2Activity"
             android:label="@string/title_activity_main2"
