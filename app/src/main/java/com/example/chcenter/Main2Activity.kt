@@ -1,8 +1,8 @@
 package com.example.chcenter
 
+import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
+import android.os.PersistableBundle
 import com.google.android.material.tabs.TabLayout
 import androidx.viewpager.widget.ViewPager
 import androidx.appcompat.app.AppCompatActivity
@@ -22,4 +22,36 @@ class Main2Activity : AppCompatActivity() {
         tabs.setupWithViewPager(viewPager)
 
     }
+
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.example_menu,menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when(item?.itemId){
+            R.id.item_office->{
+
+               // val  intent= Intent(this,Office::class.java)
+                val  intent= Intent(this, Office_Activity::class.java)
+                startActivity(intent)
+            }
+            R.id.item_history->{
+                val  intent= Intent(this, History_Activity::class.java)
+                startActivity(intent)
+
+
+            }
+            R.id.item_profile->{
+                val  intent= Intent(this, Profile_Activity::class.java)
+                startActivity(intent)
+
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+
 }
+

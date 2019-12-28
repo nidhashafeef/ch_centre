@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.chcenter" >
+    package="com.example.chcenter">
 
     <application
         android:allowBackup="true"
@@ -9,12 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddBlood"></activity>
-        <activity android:name=".SignUP"></activity>
+        <activity android:name=".Profile_Activity"></activity>
+        <activity android:name=".Office_Activity" />
+        <activity android:name=".History_Activity" />
+        <activity android:name=".Main3Activity" />
+        <activity android:name=".list" />
+        <activity android:name=".AddBlood" />
+        <activity android:name=".SignUP" />
         <activity
             android:name=".Main2Activity"
             android:label="@string/title_activity_main2"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
