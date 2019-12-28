@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.chcenter">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,11 +11,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Profile_Activity"></activity>
+        <activity android:name=".DoctorDetails">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Ambulance_Registration">
+
+        </activity>
+        <activity android:name=".Profile_Activity" />
         <activity android:name=".Office_Activity" />
         <activity android:name=".History_Activity" />
-        <activity android:name=".Main3Activity" />
-        <activity android:name=".list" />
         <activity android:name=".AddBlood" />
         <activity android:name=".SignUP" />
         <activity
@@ -21,11 +30,7 @@
             android:label="@string/title_activity_main2"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
