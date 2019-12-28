@@ -3,8 +3,8 @@ package com.example.chcenter
 import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
-import com.google.android.material.tabs.TabLayout
-import androidx.viewpager.widget.ViewPager
+import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.example.chcenter.ui.main.SectionsPagerAdapter
@@ -23,6 +23,7 @@ class Main2Activity : AppCompatActivity() {
         tabs.setupWithViewPager(viewPager)
 
     }
+
 
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
