@@ -1,9 +1,6 @@
 package com.example.chcenter.api
 
-import com.example.chcenter.api.model.DoctorModelRequest
-import com.example.chcenter.api.model.Request
-import com.example.chcenter.api.model.Response
-import com.example.chcenter.api.model.Users
+import com.example.chcenter.api.model.*
 import io.reactivex.Observable
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -19,6 +16,9 @@ interface ApiInterface {
     @POST("doctors")
     fun doctorRegistration(@Body params: DoctorModelRequest): Observable<Response>
 
+    @POST("volunteers")
+    fun volunteerRegistration(@Body params: VolunteerModelRequest): Observable<Response>
+    
 
     @GET("users?page=2")
     fun getAllUserList(): Observable<Users>

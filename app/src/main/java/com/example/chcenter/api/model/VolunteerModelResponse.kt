@@ -1,9 +1,8 @@
 package com.example.chcenter.api.model
 
-
-data class DoctorModelResponse(
+data class VolunteerModelResponse(
     var nameSerializable: String,
-    var specialisation: String,
+    var age: String,
     var place: String,
     var contactNumber: String,
     var id: String
