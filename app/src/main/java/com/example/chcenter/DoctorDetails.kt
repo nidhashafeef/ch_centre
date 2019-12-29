@@ -29,7 +29,7 @@ class DoctorDetails : AppCompatActivity() {
             val strContactNumber: String = etContact.text.toString()
             val objRequestDoctorDetails =
                 DoctorModelRequest(strName, strSpecialisation, strPlace, strContactNumber)
-            Toast.makeText(this, "...............................Saved  ", Toast.LENGTH_SHORT)
+            Toast.makeText(this, "Saved  ", Toast.LENGTH_SHORT)
                 .show()
             apiService.run {
                 doctorRegistration(objRequestDoctorDetails)
