@@ -9,9 +9,9 @@ import com.example.chcenter.adapters.BloodGroupAdapter
 import com.example.chcenter.models.Bloodgrouplist
 import kotlinx.android.synthetic.main.activity_blood_groups.*
 
-class BloodGroupsActivity : AppCompatActivity(){
+class BloodGroupsActivity : AppCompatActivity() {
 
-    companion object{
+    companion object {
         val TAG: String = BloodGroupsActivity::class.java.simpleName
     }
 
@@ -23,17 +23,15 @@ class BloodGroupsActivity : AppCompatActivity(){
         setupRecyclerView()
 
 
-
-
     }
 
     private fun setupRecyclerView() {
-        val layoutManager = LinearLayoutManager(this )
+        val layoutManager = LinearLayoutManager(this)
 
         layoutManager.orientation = LinearLayoutManager.VERTICAL
         recyclerView.layoutManager = layoutManager
 
-        val adapter= BloodGroupAdapter(
+        val adapter = BloodGroupAdapter(
             this,
             Bloodgrouplist.Bloodgroups
         )

@@ -8,33 +8,31 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.chcenter.R
 import com.example.chcenter.activities.MainActivity
 import com.example.chcenter.models.VolunteerModel
-import com.example.chcenter.R
-import com.example.chcenter.models.Volunteerlist.volunteers
 import kotlinx.android.synthetic.main.list_view_volunteers.view.*
-
 
 
 class VolunteerAdapter(
     val context: Context,
-    private val volunteers: List<VolunteerModel>) : RecyclerView.Adapter<VolunteerAdapter.MyViewHolder>(){
+    private val volunteers: List<VolunteerModel>
+) : RecyclerView.Adapter<VolunteerAdapter.MyViewHolder>() {
 
-    companion object{
+    companion object {
         val TAG: String = MainActivity::class.java.simpleName
     }
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
-        val view = LayoutInflater.from(context).inflate(R.layout.list_view_volunteers, parent, false)
+        val view =
+            LayoutInflater.from(context).inflate(R.layout.list_view_volunteers, parent, false)
         return MyViewHolder(view)
 
     }
 
     override fun getItemCount(): Int {
-
-
 
 
         return volunteers.size
@@ -48,16 +46,21 @@ class VolunteerAdapter(
 
 
     }
-    inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+
+    inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         var currenctVolunteer: VolunteerModel? = null
         var currentPosition: Int = 0
-        init {
-            itemView.setOnClickListener{
-                currenctVolunteer?.let{
-                    Toast.makeText(context, currenctVolunteer!!.Name+"Clicked !",Toast.LENGTH_SHORT).show()
-                }
 
+        init {
+            itemView.setOnClickListener {
+                currenctVolunteer?.let {
+                    Toast.makeText(
+                        context,
+                        currenctVolunteer!!.Name + "Clicked !",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
 
 
             }
@@ -67,14 +70,15 @@ class VolunteerAdapter(
             itemView.imgShare.setOnClickListener {
 
                 currenctVolunteer?.let {
-                    val message: String = "My hobby is:" + currenctVolunteer!!.Name +" " + currenctVolunteer!!.Phoneno
+                    val message: String =
+                        "My hobby is:" + currenctVolunteer!!.Name + " " + currenctVolunteer!!.Phoneno
 
                     val intent = Intent()
                     intent.action = Intent.ACTION_SEND
-                    intent.putExtra(Intent.EXTRA_TEXT,message)
-                    intent.type="text/plain"
+                    intent.putExtra(Intent.EXTRA_TEXT, message)
+                    intent.type = "text/plain"
 
-                    context.startActivity(Intent.createChooser(intent,"Please select app:"))
+                    context.startActivity(Intent.createChooser(intent, "Please select app:"))
 
                 }
 
@@ -82,10 +86,10 @@ class VolunteerAdapter(
         }
 
 
-        fun setData(volunteer: VolunteerModel?, pos:Int){
-            volunteer?.let{
+        fun setData(volunteer: VolunteerModel?, pos: Int) {
+            volunteer?.let {
 
-                itemView.txvContact.text=volunteer?.Phoneno
+                itemView.txvContact.text = volunteer?.Phoneno
                 itemView.txvName.text = volunteer?.Name
             }
 

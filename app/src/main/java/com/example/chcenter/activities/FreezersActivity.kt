@@ -4,14 +4,14 @@ package com.example.chcenter.activities
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.chcenter.adapters.FreezerAdapter
 import com.example.chcenter.R
+import com.example.chcenter.adapters.FreezerAdapter
 import com.example.chcenter.models.Freezerlist
 import kotlinx.android.synthetic.main.activity_freezers.*
 
-class FreezersActivity : AppCompatActivity(){
+class FreezersActivity : AppCompatActivity() {
 
-    companion object{
+    companion object {
         val TAG: String = FreezersActivity::class.java.simpleName
     }
 
@@ -23,17 +23,15 @@ class FreezersActivity : AppCompatActivity(){
         setupRecyclerView()
 
 
-
-
     }
 
     private fun setupRecyclerView() {
-        val layoutManager = LinearLayoutManager(this )
+        val layoutManager = LinearLayoutManager(this)
 
         layoutManager.orientation = LinearLayoutManager.VERTICAL
         recyclerView.layoutManager = layoutManager
 
-        val adapter= FreezerAdapter(
+        val adapter = FreezerAdapter(
             this,
             Freezerlist.Freezers
         )

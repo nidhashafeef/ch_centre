@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -20,7 +19,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvwardmo"
@@ -88,27 +87,27 @@
         android:id="@+id/tvcardiacdepartment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
         android:layout_marginTop="5dp"
         android:text="ORTHOPEDIATRICIAN DEPARTMENT"
         android:textSize="24sp"
-        android:layout_marginLeft="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.163"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvorthodepartment"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvorthodepartment" />
 
     <TextView
         android:id="@+id/tvophthalmologistdepartment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
         android:layout_marginTop="5dp"
         android:text="OPHTHALMOLOGIST DEPARTMENT"
         android:textSize="24sp"
-        android:layout_marginLeft="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.163"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvcardiacdepartment"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvcardiacdepartment" />
 
 
     <TextView
@@ -207,7 +206,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.026"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvanasthesia"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvanasthesia" />
 
     <TextView
         android:id="@+id/tvvimukthi"
@@ -219,7 +218,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.026"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvbloodbankmo"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvbloodbankmo" />
 
 
     <TextView
@@ -232,8 +231,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.026"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvvimukthi"/>
-
+        app:layout_constraintTop_toBottomOf="@+id/tvvimukthi" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

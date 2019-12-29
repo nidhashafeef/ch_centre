@@ -4,14 +4,14 @@ package com.example.chcenter.activities
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.chcenter.adapters.VolunteerAdapter
 import com.example.chcenter.R
+import com.example.chcenter.adapters.VolunteerAdapter
 import com.example.chcenter.models.Volunteerlist
 import kotlinx.android.synthetic.main.activity_volunteers.*
 
-class VolunteersActivity : AppCompatActivity(){
+class VolunteersActivity : AppCompatActivity() {
 
-    companion object{
+    companion object {
         val TAG: String = VolunteersActivity::class.java.simpleName
     }
 
@@ -23,18 +23,16 @@ class VolunteersActivity : AppCompatActivity(){
         setupRecyclerView()
 
 
-
-
     }
 
     private fun setupRecyclerView() {
-        val layoutManager = LinearLayoutManager(this )
+        val layoutManager = LinearLayoutManager(this)
 
         layoutManager.orientation = LinearLayoutManager.VERTICAL
         recyclerView.layoutManager = layoutManager
 
 
-        val adapter=VolunteerAdapter(
+        val adapter = VolunteerAdapter(
             this,
             Volunteerlist.volunteers
         )
