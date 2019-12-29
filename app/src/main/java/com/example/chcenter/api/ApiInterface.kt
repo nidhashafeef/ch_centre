@@ -22,4 +22,21 @@ interface ApiInterface {
 
     @GET("users?page=2")
     fun getAllUserList(): Observable<Users>
+
+    @GET("getDocterDetailsData")
+    fun docoterlistview():Observable<DoctorlistviewModels>
+
+    @GET("getAmbulanceDetailsData")
+    fun ambulancelistview():Observable<DoctorlistviewModels>
+
+    @GET("getBloodGroupDetailsData")
+    fun bloodgrouplistview():Observable<BloodGroplistviewModels>
+
+    @GET("getFreezerDetailsData")
+    fun freezerlistview():Observable<FreezerlistviewModels>
+
+    @GET("getVolunteerDetailsData")
+    fun volunteerlistview():Observable<VolunteerlistviewModels>
+
+
 }
