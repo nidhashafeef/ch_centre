@@ -49,10 +49,10 @@ class Main2Activity : AppCompatActivity() {
                 startActivity(intent)
 
             }
+
         }
         return super.onOptionsItemSelected(item)
     }
-
 
 }
 
