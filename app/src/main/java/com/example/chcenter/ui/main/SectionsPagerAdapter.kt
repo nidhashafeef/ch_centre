@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.example.chcenter.Fragment_BloodBank
+import com.example.chcenter.FragmentBloodBank
 import com.example.chcenter.Fragment_Service
 import com.example.chcenter.Fragment_Update
 import com.example.chcenter.R
@@ -31,7 +31,7 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
                 return Fragment_Service()
             }
             2 -> {
-                return Fragment_BloodBank()
+                return FragmentBloodBank()
             }
         }
         // getItem is called to instantiate the fragment for the given page.

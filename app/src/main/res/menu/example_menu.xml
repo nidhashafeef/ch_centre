@@ -3,17 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item android:id="@+id/item_office"
-        android:title="Office Details" />
+        android:title="Office Details"
+        />
 
     <item android:id="@+id/item_history"
         android:title="History" />
 
     <item android:id="@+id/item_profile"
-        android:title="Profile">
-
-
-
-    </item>
+        android:title="Profile"/>
 
 
 </menu>
