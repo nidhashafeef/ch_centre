@@ -8,16 +8,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.chcenter.R
 import com.example.chcenter.activities.MainActivity
 import com.example.chcenter.models.FreezerModel
-import com.example.chcenter.R
 import kotlinx.android.synthetic.main.list_view_freezer.view.*
 
 
+class FreezerAdapter(val context: Context, private val freezers: List<FreezerModel>) :
+    RecyclerView.Adapter<FreezerAdapter.MyViewHolder>() {
 
-class FreezerAdapter(val context: Context, private val freezers: List<FreezerModel>) : RecyclerView.Adapter<FreezerAdapter.MyViewHolder>(){
-
-    companion object{
+    companion object {
         val TAG: String = MainActivity::class.java.simpleName
     }
 
@@ -43,17 +43,22 @@ class FreezerAdapter(val context: Context, private val freezers: List<FreezerMod
 
 
     }
-    inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+
+    inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
 
         var currenctFreezer: FreezerModel? = null
         var currentPosition: Int = 0
-        init {
-            itemView.setOnClickListener{
-                currenctFreezer?.let{
-                    Toast.makeText(context, currenctFreezer!!.Name+"Clicked !",Toast.LENGTH_SHORT).show()
-                }
 
+        init {
+            itemView.setOnClickListener {
+                currenctFreezer?.let {
+                    Toast.makeText(
+                        context,
+                        currenctFreezer!!.Name + "Clicked !",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
 
 
             }
@@ -67,20 +72,20 @@ class FreezerAdapter(val context: Context, private val freezers: List<FreezerMod
 
                     val intent = Intent()
                     intent.action = Intent.ACTION_SEND
-                    intent.putExtra(Intent.EXTRA_TEXT,message)
-                    intent.type="text/plain"
+                    intent.putExtra(Intent.EXTRA_TEXT, message)
+                    intent.type = "text/plain"
 
-                    context.startActivity(Intent.createChooser(intent,"Please select app:"))
+                    context.startActivity(Intent.createChooser(intent, "Please select app:"))
 
                 }
 
             }
         }
 
-        fun setData(freezer: FreezerModel?, pos:Int){
-            freezer?.let{
+        fun setData(freezer: FreezerModel?, pos: Int) {
+            freezer?.let {
 
-                itemView.txvContact.text=freezer?.Phoneno
+                itemView.txvContact.text = freezer?.Phoneno
                 itemView.txvName.text = freezer?.Name
             }
 

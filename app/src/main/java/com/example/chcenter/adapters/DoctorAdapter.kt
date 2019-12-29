@@ -2,22 +2,21 @@ package com.example.chcenter.adapters
 
 
 import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.chcenter.R
 import com.example.chcenter.activities.MainActivity
 import com.example.chcenter.models.DoctorModel
-import com.example.chcenter.R
 import kotlinx.android.synthetic.main.list_view_docter.view.*
 
 
+class DoctorAdapter(val context: Context, private val docters: List<DoctorModel>) :
+    RecyclerView.Adapter<DoctorAdapter.MyViewHolder>() {
 
-class DoctorAdapter(val context: Context, private val docters: List<DoctorModel>) : RecyclerView.Adapter<DoctorAdapter .MyViewHolder>(){
-
-    companion object{
+    companion object {
         val TAG: String = MainActivity::class.java.simpleName
     }
 
@@ -43,16 +42,19 @@ class DoctorAdapter(val context: Context, private val docters: List<DoctorModel>
 
 
     }
-    inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+
+    inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         var currenctDoctor: DoctorModel? = null
         var currentPosition: Int = 0
+
         init {
-            itemView.setOnClickListener{
+            itemView.setOnClickListener {
 
 
-                currenctDoctor?.let{
-                    Toast.makeText(context, currenctDoctor!!.Name+"Clicked !",Toast.LENGTH_SHORT).show()
+                currenctDoctor?.let {
+                    Toast.makeText(context, currenctDoctor!!.Name + "Clicked !", Toast.LENGTH_SHORT)
+                        .show()
 
 
                 }
@@ -60,13 +62,13 @@ class DoctorAdapter(val context: Context, private val docters: List<DoctorModel>
             }
         }
 
-        fun setData(docter: DoctorModel?, pos:Int){
-            docter?.let{
+        fun setData(docter: DoctorModel?, pos: Int) {
+            docter?.let {
 
-                itemView.txvContact.text=docter?.Phoneno
+                itemView.txvContact.text = docter?.Phoneno
                 itemView.txvName.text = docter?.Name
-                itemView.txvSepecialization.text=docter?.Sepacialization
-                itemView.txvPlace.text=docter?.Place
+                itemView.txvSepecialization.text = docter?.Sepacialization
+                itemView.txvPlace.text = docter?.Place
             }
 
             this.currenctDoctor = docter

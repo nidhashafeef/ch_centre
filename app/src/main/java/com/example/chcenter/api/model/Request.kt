@@ -1,4 +1,5 @@
 package com.example.chcenter.api.model
 
-class Request {
-}
+import java.io.Serializable
+
+data class Request(var name: String, var job: String) : Serializable
