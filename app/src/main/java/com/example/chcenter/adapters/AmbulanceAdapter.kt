@@ -64,7 +64,7 @@ class AmbulanceAdapter(val context: Context, private val ambulances: List<Ambula
             itemView.imgShare.setOnClickListener {
 
                 currenctAmbulance?.let {
-                    val message: String = "My hobby is:" + currenctAmbulance!!.Name
+                    val message: String =  currenctAmbulance!!.Name
 
                     val intent = Intent()
                     intent.action = Intent.ACTION_SEND
