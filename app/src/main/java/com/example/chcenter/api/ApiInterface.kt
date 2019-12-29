@@ -14,11 +14,11 @@ interface ApiInterface {
 
 
     @POST("doctors")
-    fun doctorRegistration(@Body params: DoctorModelRequest): Observable<Response>
+    fun doctorRegistration(@Body params: DoctorModelRequest): Observable<DoctorModelResponse>
 
     @POST("volunteers")
-    fun volunteerRegistration(@Body params: VolunteerModelRequest): Observable<Response>
-
+    fun volunteerRegistration(@Body params: VolunteerModelRequest): Observable<VolunteerModelResponse>
+    
 
     @GET("users?page=2")
     fun getAllUserList(): Observable<Users>
