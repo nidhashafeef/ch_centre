@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.chcenter">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,19 +20,36 @@
         <activity android:name=".AddBlood">
 
         </activity>
+
         <activity android:name=".SignUP" />
         <activity
             android:name=".Main2Activity"
             android:label="@string/title_activity_main2"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".MainActivity" ><intent-filter>
-        <action android:name="android.intent.action.MAIN" />
-
-        <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter></activity>
 
 
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" >
+
+
+        </activity>
+
+        <activity android:name=".DoctorDetails"></activity>
+        <activity android:name=".Ambulance_Registration"></activity>
+
+        <activity android:name=".activities.BloodGroupsActivity" />
+        <activity android:name=".activities.DoctorsActivity" />
+        <activity android:name=".activities.VolunteersActivity" />
+        <activity android:name=".activities.AmbulancesActivity" />
+        <activity android:name=".activities.FreezersActivity" />
+        <activity android:name=".details.FreezerDetails" />
+        <activity android:name=".AmbulDetails" />
+        <activity android:name=".MorningDoctors" />
     </application>
 
 </manifest>

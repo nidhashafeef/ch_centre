@@ -15,10 +15,7 @@ import kotlinx.android.synthetic.main.fragment_bloodbank.*
 class FragmentBloodBank : Fragment(), AdapterView.OnItemSelectedListener {
 
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setHasOptionsMenu(true)
-    }
+
 
 
     override fun onCreateView(
@@ -29,28 +26,7 @@ class FragmentBloodBank : Fragment(), AdapterView.OnItemSelectedListener {
         return inflater.inflate(R.layout.fragment_bloodbank, null)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.item_office -> {
 
-                // val  intent= Intent(this,Office::class.java)
-                val intent = Intent(activity, Office_Activity::class.java)
-                startActivity(intent)
-            }
-            R.id.item_history -> {
-                val intent = Intent(activity, History_Activity::class.java)
-                startActivity(intent)
-
-
-            }
-            R.id.item_profile -> {
-                val intent = Intent(activity, Profile_Activity::class.java)
-                startActivity(intent)
-
-            }
-        }
-        return super.onOptionsItemSelected(item)
-    }
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -72,6 +48,12 @@ class FragmentBloodBank : Fragment(), AdapterView.OnItemSelectedListener {
 
 
     }
+
+
+
+
+
+
 
     override fun onNothingSelected(adapterView: AdapterView<*>) {
 

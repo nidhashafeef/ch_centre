@@ -5,11 +5,18 @@ import android.os.Bundle
 import android.view.*
 import androidx.core.content.ContextCompat.startActivity
 import androidx.fragment.app.Fragment
+import kotlinx.android.synthetic.main.activity_ambulance_details.*
+
+
+
 
 class Fragment_Service : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
+
+
+
     }
 
     override fun onCreateView(
@@ -25,6 +32,8 @@ class Fragment_Service : Fragment() {
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.example_menu, menu)
+
+
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -49,4 +58,8 @@ class Fragment_Service : Fragment() {
         }
         return super.onOptionsItemSelected(item)
     }
+
+
+
 }
+
