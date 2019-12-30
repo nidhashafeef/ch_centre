@@ -27,7 +27,7 @@ class ApiService {
                 .client(client)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
-                .baseUrl("https://reqres.in/api/")
+                .baseUrl("https://52.66.195.66:9999/api/")
                 .build()
 
             return retrofit.create(ApiInterface::class.java)

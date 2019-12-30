@@ -9,21 +9,30 @@ import retrofit2.http.POST
 interface ApiInterface {
 
 
-    @POST("users")
-    fun userRegistration(@Body params: Request): Observable<Response>
-
+    @POST("ambulance")
+    fun ambulanceRegistration(@Body params: AmbulanceRequest): Observable<AmbulanceResponse>
 
     @POST("doctors")
     fun doctorRegistration(@Body params: DoctorModelRequest): Observable<DoctorModelResponse>
 
     @POST("volunteers")
     fun volunteerRegistration(@Body params: VolunteerModelRequest): Observable<VolunteerModelResponse>
-    
+
+    @POST("addblood")
+    fun addBlood(@Body params: AddBloodRequest): Observable<AddBloodResponse>
+
+    @POST("freezer")
+    fun freezer(@Body params: FreezerRequest): Observable<FreezerResponse>
+
+
+
+
+
 
     @GET("users?page=2")
     fun getAllUserList(): Observable<Users>
 
-    @GET("getDocterDetailsData")
+    @GET("user/getDocterDetailsData")
     fun docoterlistview():Observable<DoctorlistviewModels>
 
     @GET("getAmbulanceDetailsData")

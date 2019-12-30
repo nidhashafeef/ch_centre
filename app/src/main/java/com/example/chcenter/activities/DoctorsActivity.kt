@@ -31,6 +31,7 @@ class DoctorsActivity : AppCompatActivity() {
 
         setupRecyclerView()
 
+        getDoctorList()
     }
 
 
