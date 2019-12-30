@@ -9,37 +9,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ProfileActivit"></activity>
-        <activity android:name=".LogoActivity"/>
-
-
-
-        <activity android:name=".InstructionActivity" >
-
-        </activity>
-
-        <activity android:name=".RegistrstionActivity"/>
-
-
-        <activity android:name=".OTPActivity" >  </activity>
-        <activity android:name=".SignUpActivity" >
-            <intent-filter>
+        <activity android:name=".OfficeActivity">
+        <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter></activity>
-
+        <activity android:name=".ProfileActivit" />
+        <activity android:name=".LogoActivity" />
+        <activity android:name=".InstructionActivity" />
+        <activity android:name=".RegistrstionActivity" />
+        <activity android:name=".OTPActivity" />
+        <activity android:name=".SignUpActivity" />
         <activity android:name=".Profile_Activity" />
-        <activity android:name=".Office_Activity" />
+        <activity android:name=".Office_Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".History_Activity" />
         <activity android:name=".AddBlood" />
         <activity
             android:name=".Main2Activity"
             android:label="@string/title_activity_main2"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
