@@ -14,7 +14,6 @@ class Fragment_Update : Fragment() {
     }
     override fun onCreateView(
         inflater: LayoutInflater,
-
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
@@ -30,7 +29,7 @@ class Fragment_Update : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item?.itemId){
+        when(item.itemId){
             R.id.item_office->{
 
                 // val  intent= Intent(this,Office::class.java)
