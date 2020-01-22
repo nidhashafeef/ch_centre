@@ -7,6 +7,6 @@ class Office_Activity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_office_)
+        setContentView(R.layout.officeactivity)
     }
 }
