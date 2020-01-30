@@ -44,6 +44,12 @@ class Main2Activity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item?.itemId) {
+            R.id.item_donation -> {
+
+                // val  intent= Intent(this,Office::class.java)
+                val intent = Intent(this, DonationActivity::class.java)
+                startActivity(intent)
+            }
             R.id.item_office -> {
 
                 // val  intent= Intent(this,Office::class.java)
@@ -58,6 +64,12 @@ class Main2Activity : AppCompatActivity() {
             }
             R.id.item_profile -> {
                 val intent = Intent(this, Profile_Activity::class.java)
+                startActivity(intent)
+
+            }
+
+            R.id.item_ambulance ->{
+                val intent = Intent(this, Ambulance_Registration::class.java)
                 startActivity(intent)
 
             }

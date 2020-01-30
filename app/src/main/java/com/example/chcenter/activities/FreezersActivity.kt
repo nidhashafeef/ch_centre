@@ -11,7 +11,9 @@ import com.example.chcenter.api.ApiService
 import com.example.chcenter.models.Freezerlist
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
+import kotlinx.android.synthetic.main.activity_doctors.*
 import kotlinx.android.synthetic.main.activity_freezers.*
+import kotlinx.android.synthetic.main.activity_freezers.recyclerView
 
 class FreezersActivity : AppCompatActivity() {
 
@@ -26,6 +28,12 @@ class FreezersActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_freezers)
+
+        setSupportActionBar(toolbar11)
+
+        getSupportActionBar()!!.setTitle("Freezers")
+        getSupportActionBar()!!.setDefaultDisplayHomeAsUpEnabled(true);
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
 
         setupRecyclerView()

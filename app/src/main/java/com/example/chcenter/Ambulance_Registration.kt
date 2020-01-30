@@ -9,6 +9,7 @@ import com.example.chcenter.api.model.Request
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_ambulance__registration.*
+import kotlinx.android.synthetic.main.activity_donation.*
 
 class Ambulance_Registration : AppCompatActivity() {
 
@@ -19,6 +20,13 @@ class Ambulance_Registration : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ambulance__registration)
+
+        setSupportActionBar(toolbar16)
+
+        getSupportActionBar()!!.setTitle("Donations")
+        getSupportActionBar()!!.setDefaultDisplayHomeAsUpEnabled(true);
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
 
 
         btnSave.setOnClickListener {

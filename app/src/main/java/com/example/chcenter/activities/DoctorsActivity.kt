@@ -11,7 +11,9 @@ import com.example.chcenter.api.ApiService
 import com.example.chcenter.models.Doctorlist
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
+import kotlinx.android.synthetic.main.activity_ambulances.*
 import kotlinx.android.synthetic.main.activity_doctors.*
+import kotlinx.android.synthetic.main.activity_doctors.recyclerView
 
 class DoctorsActivity : AppCompatActivity() {
 
@@ -28,6 +30,13 @@ class DoctorsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_doctors)
+
+        setSupportActionBar(toolbar4)
+
+        getSupportActionBar()!!.setTitle("Doctor Details")
+        getSupportActionBar()!!.setDefaultDisplayHomeAsUpEnabled(true);
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
 
         setupRecyclerView()
 

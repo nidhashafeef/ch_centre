@@ -11,7 +11,9 @@ import com.example.chcenter.api.ApiService
 import com.example.chcenter.models.Volunteerlist
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
+import kotlinx.android.synthetic.main.activity_freezers.*
 import kotlinx.android.synthetic.main.activity_volunteers.*
+import kotlinx.android.synthetic.main.activity_volunteers.recyclerView
 
 class VolunteersActivity : AppCompatActivity() {
 
@@ -26,6 +28,13 @@ class VolunteersActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_volunteers)
+
+        setSupportActionBar(toolbar5)
+
+        getSupportActionBar()!!.setTitle("Volunteers")
+        getSupportActionBar()!!.setDefaultDisplayHomeAsUpEnabled(true);
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
 
 
         setupRecyclerView()
