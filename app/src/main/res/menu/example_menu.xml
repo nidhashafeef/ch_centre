@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <item android:id="@+id/item_donation"
         android:title="Donation"
         app:showAsAction="always"/>
@@ -14,12 +15,21 @@
         app:showAsAction="never"/>
 
     <item android:id="@+id/item_profile"
-android:title="Profile"
-app:showAsAction="never"/>
+          android:title="Profile"
+          app:showAsAction="never"/>
 
-<item android:id="@+id/item_ambulance"
-android:title="Ambulance Registration"
-app:showAsAction="never"/>
+    <item android:id="@+id/item_ambulance"
+          android:title="Ambulance Registration"
+          app:showAsAction="never"/>
+
+    <item android:id="@+id/item_Doctor"
+        android:title="Doctor  Registration"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/item_volunteer"
+        android:title="Volunteer  Registration"
+        app:showAsAction="never"/>
 
 
-    </menu>
+
+</menu>

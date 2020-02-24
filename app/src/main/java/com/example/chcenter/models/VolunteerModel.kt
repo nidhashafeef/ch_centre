@@ -6,28 +6,8 @@ object Volunteerlist {
     val volunteers = listOf(
         VolunteerModel("Bunays", "8943608487"),
         VolunteerModel("Bunays", "8943608487"),
-        VolunteerModel("Bunays", "8943608487"),
-        VolunteerModel("Bunays", "8943608487"),
-        VolunteerModel("Bunays", "8943608487"),
-        VolunteerModel("Bunays", "8943608487"),
-        VolunteerModel("Bunays", "8943608487"),
-        VolunteerModel("Bunays", "8943608487"),
-        VolunteerModel("Bunays", "8943608487"),
-        VolunteerModel("Bunays", "8943608487"),
-        VolunteerModel("Bunays", "8943608487"),
-        VolunteerModel("Bunays", "8943608487"),
-        VolunteerModel("Bunays", "8943608487"),
-        VolunteerModel("Bunays", "8943608487"),
-        VolunteerModel("Bunays", "8943608487"),
-        VolunteerModel("Bunays", "8943608487"),
-        VolunteerModel("Bunays", "8943608487"),
-        VolunteerModel("Bunays", "8943608487"),
-        VolunteerModel("Bunays", "8943608487"),
-        VolunteerModel("Bunays", "8943608487"),
-        VolunteerModel("Bunays", "8943608487"),
-        VolunteerModel("Bunays", "8943608487"),
-        VolunteerModel("Bunays", "8943608487"),
         VolunteerModel("Bunays", "8943608487")
+
 
     )
 }

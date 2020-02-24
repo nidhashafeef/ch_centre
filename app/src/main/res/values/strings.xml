@@ -22,4 +22,7 @@
     <string name="card_content">This data </string>
     <string name="card_place">Place</string>
     <string name="card_sepacialization">Sepecialization</string>
+    <string name="card_Venue">card_Venue</string>
+    <string name="Venue">Venue</string>
+    <string name="Date">Date</string>
 </resources>

@@ -20,6 +20,13 @@ class DoctorDetails : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_doctor_details)
 
+        setSupportActionBar(toolbar13)
+
+        getSupportActionBar()!!.setTitle("Doctor Registration")
+        getSupportActionBar()!!.setDefaultDisplayHomeAsUpEnabled(true);
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+
 
         btnDoctorDetails.setOnClickListener {
 

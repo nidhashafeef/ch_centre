@@ -23,7 +23,7 @@ class Ambulance_Registration : AppCompatActivity() {
 
         setSupportActionBar(toolbar16)
 
-        getSupportActionBar()!!.setTitle("Donations")
+        getSupportActionBar()!!.setTitle("Ambulance Registration")
         getSupportActionBar()!!.setDefaultDisplayHomeAsUpEnabled(true);
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 

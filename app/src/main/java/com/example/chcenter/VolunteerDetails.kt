@@ -19,6 +19,12 @@ class VolunteerDetails : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_volunteer)
 
+        setSupportActionBar(toolbar15)
+
+        getSupportActionBar()!!.setTitle("Volunteer Registration")
+        getSupportActionBar()!!.setDefaultDisplayHomeAsUpEnabled(true);
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         btnVolunteer.setOnClickListener {
             val strVolunteerName: String = etVolunteerName.text.toString()
             val strVolunteerAge: String = etVolunteerAge.text.toString()

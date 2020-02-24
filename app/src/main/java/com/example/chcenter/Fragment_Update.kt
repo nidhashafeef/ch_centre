@@ -26,6 +26,16 @@ class Fragment_Update : Fragment() {
             val intent=Intent(activity,MorningDoctors::class.java)
             startActivity(intent)
         }
+
+        view.textview1.setOnClickListener { view ->
+            val intent = Intent(activity, Programs::class.java)
+            startActivity(intent)
+        }
+        view.textView21.setOnClickListener { view ->
+            val intent = Intent(activity, Requirments::class.java)
+            startActivity(intent)
+        }
+
         return view
 
 

@@ -1,37 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="140dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="64dp"
-        android:text="DOCTOR"
-        android:textAlignment="center"
-        android:textStyle="bold"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView17"
-        android:layout_width="140dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="92dp"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+
+        android:layout_marginTop="128dp"
         android:text="Doctor's Name :"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar13" />
 
     <TextView
         android:id="@+id/textView18"
-        android:layout_width="140dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="44dp"
         android:text="Specialisation :"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,9 +40,9 @@
 
     <TextView
         android:id="@+id/textView19"
-        android:layout_width="140dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="44dp"
         android:text="Place :"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,9 +50,9 @@
 
     <TextView
         android:id="@+id/textView20"
-        android:layout_width="140dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="44dp"
         android:text="Contact Number :"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,45 +60,49 @@
 
     <EditText
         android:id="@+id/etName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="84dp"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="10dp"
         android:ems="10"
         android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView17"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar13" />
 
     <EditText
         android:id="@+id/etSpecialisation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="10dp"
         android:ems="10"
         android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView18"
         app:layout_constraintTop_toBottomOf="@+id/etName" />
 
     <EditText
         android:id="@+id/etPlace"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="10dp"
         android:ems="10"
         android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView19"
         app:layout_constraintTop_toBottomOf="@+id/etSpecialisation" />
 
     <EditText
         android:id="@+id/etContact"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="10dp"
         android:ems="10"
         android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView20"
         app:layout_constraintTop_toBottomOf="@+id/etPlace" />
 
@@ -106,22 +111,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SAVE"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.693" />
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
     <Button
         android:id="@+id/btnUserList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="UserList"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.816" />
+        app:layout_constraintTop_toBottomOf="@+id/btnDoctorDetails" />
 </androidx.constraintlayout.widget.ConstraintLayout>

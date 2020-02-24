@@ -73,7 +73,14 @@ class Main2Activity : AppCompatActivity() {
                 startActivity(intent)
 
             }
-
+            R.id.item_Doctor -> {
+                val intent = Intent(this, DoctorDetails::class.java)
+                startActivity(intent)
+            }
+            R.id.item_volunteer -> {
+                val intent = Intent(this, VolunteerDetails::class.java)
+                startActivity(intent)
+            }
         }
         return super.onOptionsItemSelected(item)
     }
