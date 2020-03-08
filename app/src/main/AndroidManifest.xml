@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.chcenter">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+
 
     <application
         android:allowBackup="true"
@@ -11,29 +12,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Profile_Activity"></activity>
+        <activity android:name=".ui.main.MorningDocters"/>
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".OtpActivity" />
+        <activity android:name=".Profile_Activity" />
         <activity android:name=".Office_Activity" />
         <activity android:name=".History_Activity" />
         <activity android:name=".AddBlood" />
         <activity android:name=".SignUP" />
-        <activity
-            android:name=".Main2Activity"
-            android:label="@string/title_activity_main2"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-
-        <activity android:name=".DoctorDetails"></activity>
-        <activity android:name=".Ambulance_Registration">
-
-        </activity>
-
+        <activity android:name=".Main2Activity"/>
+         android:label="@string/title_activity_main2"
+        android:theme="@style/AppTheme.NoActionBar"
+        <activity android:name=".MainActivity" />
+        <activity android:name=".DoctorDetails" />
+        <activity android:name=".Ambulance_Registration" />
         <activity android:name=".activities.BloodGroupsActivity" />
         <activity android:name=".activities.DoctorsActivity" />
         <activity android:name=".activities.VolunteersActivity" />
@@ -42,6 +39,7 @@
         <activity android:name=".details.FreezerDetails" />
         <activity android:name=".AmbulDetails" />
         <activity android:name=".MorningDoctors" />
+        <activity android:name=".PhoneAuthentication" />
     </application>
 
 </manifest>

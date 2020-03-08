@@ -49,25 +49,4 @@ class DoctorDetails : AppCompatActivity() {
         }
 
 
-        btnUserList.setOnClickListener {
-            apiService.run {
-                getAllUserList()
-                    .subscribeOn(Schedulers.io())
-                    .observeOn(AndroidSchedulers.mainThread())
-                    .subscribe(
-                        { result ->
-                            Log.d(
-                                "Successful Dr Register",
-                                "response from api ${result.data.get(0)}"
-                            )
-
-                        },
-                        { error ->
-                            Log.e(" Error", "response from api ${error.localizedMessage}")
-                        }
-                    )
-            }
-        }
-
-    }
-}
+     }}
