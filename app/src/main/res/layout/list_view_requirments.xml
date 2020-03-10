@@ -34,7 +34,7 @@
                         android:id="@+id/imageView51"
                         android:layout_width="342dp"
                         android:layout_height="115dp"
-                        android:src="@drawable/pic_6" />
+                        android:src="@drawable/wheelchair" />
 
                     <TextView
                         android:id="@+id/txvNameR"
